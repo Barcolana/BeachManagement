@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beach Management App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Beach Umbrella & Cabin Booking</h1>
+
+        <form id="bookingForm">
+            <input type="text" id="customerName" placeholder="Customer Name" required />
+
+            <label for="bookingDate">Booking Date:</label>
+            <input type="date" id="bookingDate" required />
+
+            <label for="umbrellaNumber">Select Umbrella:</label>
+            <select id="umbrellaNumber">
+                <option value="">-- None --</option>
+            </select>
+
+            <label for="cabinNumber">Select Cabin:</label>
+            <select id="cabinNumber">
+                <option value="">-- None --</option>
+            </select>
+
+            <button type="submit">Book</button>
+        </form>
+
+        <h2>Current Bookings</h2>
+        <ul id="bookingList"></ul>
+
+        <input type="text" id="filterName" placeholder="Search by name" />
+        <input type="date" id="filterDate" />
+        <button onclick="applyFilters()">Filter</button>
+        <button onclick="resetFilters()">Reset</button>
+        <button id="toggleStorageBtn">View bookings</button>
+        <div id="storageOutput" style="margin-top: 10px; display: none;"></div>
+
+
+
+
+
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
